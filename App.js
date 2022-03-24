@@ -31,16 +31,18 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "space-around",
-    flexWrap : "wrap",
-    flexDirection: 'row',
-    alignContent : 'center',
+  container: { 
+    height : '100%',
+    width : '100%',
+    backgroundColor : '#454ADE',
+    
   },
   userContainer : {
-    flex : 1,
+    maxHeight : '100%',
     flexWrap : "nowrap",
     flexDirection: 'column',
+    padding : 10,
+    paddingTop : 10,
+    marginVertical : 10,
   }
 });
