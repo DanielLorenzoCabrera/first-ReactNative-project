@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { Text, View, Image, StyleSheet, Pressable } from "react-native";
+import React, { useState } from 'react';
+import { Text, View, Image, StyleSheet, Pressable } from 'react-native';
 
 const User = (props) => {
-  const randomGenre = () => (Math.random() < 0.5 ? "female" : "male");
-  const randomPic = () => {
-    return Math.round(Math.random() * 100);
-  };
+  const randomGenre = () => (Math.random() < 0.5 ? 'female' : 'male');
+  const randomPic = () => Math.round(Math.random() * 100);
+
   const picture = `https://minimaltoolkit.com/images/randomdata/${randomGenre()}/${randomPic()}.jpg`;
   const [state, changeState] = useState(false);
-  const changeStyle = () => changeState((state) => !state);
+  const changeStyle = () => changeState(!state);
 
   return (
     <Pressable onPress={() => { changeStyle(); }}>
@@ -34,10 +33,10 @@ const styles = StyleSheet.create({
     height: 100,
   },
   user: {
-    backgroundColor: "#F6F7EB",
+    backgroundColor: '#F6F7EB',
     margin: 5,
     padding: 10,
-    flexDirection: "row",
+    flexDirection: 'row',
     flex: 1,
     borderRadius: 10,
   },
@@ -49,15 +48,15 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   textTag: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   activeUser: {
-    backgroundColor: "#9B97B2",
-    height: "100%",
+    backgroundColor: '#9B97B2',
+    height: '100%',
     flex: 1,
-    justifyContent: "center",
-    flexDirection: "column",
-    alignItems: "center",
+    justifyContent: 'center',
+    flexDirection: 'column',
+    alignItems: 'center',
     padding: 10,
     marginVertical: 10,
     borderRadius: 10,
